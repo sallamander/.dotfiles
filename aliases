@@ -1,0 +1,43 @@
+### Git commands ###
+alias grp="git remote prune origin"
+alias gp="git pull"
+alias gs="git status"
+alias gss="git status -s"
+alias gb="git branch"
+alias gc="git checkout"
+alias gcr="git checkout" # include remote references in the tab completion
+alias grH="git reset HEAD"
+alias gl="git log"
+alias gm="git log --pretty=fuller | grep 'Commit:' | head -n 20 | sort | uniq -c | sort -r -n"
+alias gd="git diff"
+alias ga="git add"
+alias yolo="git push --force"
+alias grm='git rebase master'
+
+### Jupyter notebooks ###
+alias jnb="jupyter notebook"
+
+### Navigation ###
+alias ..="cd .."
+alias ...="cd ../.."
+alias lsl="ls -lhSG"
+alias ls="ls -G"
+
+### Profiles ###
+alias bp="vim ~/.bash_profile"
+alias sbp="source ~/.bash_profile"
+
+#### Random ###
+alias path='echo $PATH | tr -s ":" "\n"' # pretty print path
+
+### SQL DB Commands ###
+alias psqld="postgres -D /usr/local/var/postgres"
+alias sq3="sqlite3"
+
+### Tmux commands ###
+alias tks="tmux kill-session -t"
+alias tka="tmux kill-session -a"
+alias tls="tmux ls"
+alias tns="tmux new -s"
+alias ta="tmux attach -t"
+alias trs="tmux rename-session"

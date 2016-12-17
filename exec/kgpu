@@ -1,0 +1,5 @@
+#!/bin/bash
+
+gpu=$1
+kill -9 $(nvidia-smi -g 2 | awk '$2=="Processes:" {p=1} p && $3 > 0 {print $3}')
+kill -9 $(ps aux | grep python | grep "gpu $gpu" | awk '{ print $2 }')

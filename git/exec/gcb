@@ -1,0 +1,10 @@
+#!/bin/bash
+
+branchname=$1
+alias=$2
+
+git checkout -b $branchname
+
+if [ -n "$alias" ]; then
+    gsr $branchname $alias
+fi

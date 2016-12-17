@@ -1,0 +1,4 @@
+#!/bin/bash
+
+user=$1
+kill -9 $(ps aux | grep python | grep ${user} | awk '{ print $2 }')

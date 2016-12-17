@@ -1,0 +1,13 @@
+[core]
+	editor = vim
+    excludesfile=~/.gitignore_global
+[credential]
+    helper = store --file ~/.git-credentials
+[push]
+	default = simple
+[rerere]
+    enabled = true
+[user]
+    name = Sean Sall
+    email = sean@arterys.com
+    username = sallamander

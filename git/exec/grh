@@ -1,0 +1,9 @@
+#!/bin/bash
+
+back=$1
+
+if ![ -n  $back ]; then
+    back=1
+fi
+
+git reset --hard HEAD~$back

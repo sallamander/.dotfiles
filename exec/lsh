@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Search for only hidden files starting with a certain letter
+# (or all by default)
+
+letter=$1
+
+if [ -n "$letter" ]; then
+    ls -a | grep ^\.$letter
+else
+    ls -a | grep '^\.'
+fi

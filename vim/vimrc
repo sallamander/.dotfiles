@@ -59,6 +59,13 @@ inoremap jj <ESC>
     set statusline+=%#warningmsg#
     set statusline+=%{SyntasticStatuslineFlag()}
     set statusline+=%*
+    let g:syntastic_always_populate_loc_list = 1
+    let g:syntastic_auto_loc_list = 1
+    let g:syntastic_enable_signs=1
+    let g:syntastic_check_on_open=0
+    let g:syntastic_check_on_wq = 0
+    let g:syntastic_python_checkers=['pyflakes', 'pep8']
+    let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 
 "Mappings
     "Folding
@@ -107,15 +114,15 @@ inoremap jj <ESC>
     nnoremap <leader>p :<C-u>exec 'normal ' . v:count1 . '"+p'<CR>
     vnoremap <leader>p "+p
 
+    "Syntastic
+    nnoremap <leader>l :SyntasticCheck<CR>
+    nnoremap <leader>ln :lnext<CR>
+    nnoremap <leader>lb :lprevious<CR>
+
 "Bottom bar settings
 set noruler
 set laststatus=2
 set statusline=%<\ %f\ %m%y%=%-35.(Line:\ %l\ of\ %L,\ Col:\ %c%V\ (%P)%)
-
-"Folding plugin
-let g:pymode_folding=0
-set foldmethod=indent
-set foldlevel=99
 
 "Python indenting
 au BufNewFile,BufRead *.py
@@ -132,3 +139,7 @@ au BufNewFile,BufRead *.js, *.html, *.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
+
+"jedi-vim
+let g:jedi#use_splits_not_buffers = "bottom"
+let g:jedi#popup_on_dot = 0

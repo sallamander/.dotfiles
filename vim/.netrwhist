@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/sallamander/arterys/repos/vision2/.ropeproject'
 let g:netrw_dirhist_2='/Users/sallamander/.vim'
 let g:netrw_dirhist_3='/Users/sallamander/.dotfiles/git/exec'
@@ -7,3 +7,5 @@ let g:netrw_dirhist_4='/Users/sallamander/arterys/repos/vision2/nnets/keras/netw
 let g:netrw_dirhist_5='/Users/sallamander/arterys/repos/vision3/projects/mimic/training_files'
 let g:netrw_dirhist_6='/Users/sallamander/arterys/repos/vision2/projects/mimic/scripts'
 let g:netrw_dirhist_7='/Users/sallamander/arterys/repos/vision3/nnets/keras/networks'
+let g:netrw_dirhist_8='/Users/sallamander/projects/java_studies/ReaderFiles/Chap02/LowArrayCopy/.idea'
+let g:netrw_dirhist_9='/Users/sallamander/arterys/repos/vision3/scripts/ci/docker'

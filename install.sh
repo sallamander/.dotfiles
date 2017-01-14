@@ -25,6 +25,10 @@ if [ `uname` == 'Darwin' ]; then
   echo "set -g default-command 'reattach-to-user-namespace -l ${SHELL}'" >> ~/.tmux.conf
   echo "set -g pane-border-style fg='#a9b7c6'" >> ~/.tmux.conf
 elif [ `uname` == 'Linux' ]; then
+  sudo apt-get install -y cmake
+  # change ownership so that `make install` of the tmux-mem-cpu-load can copy
+  # the install to /usr/local/bin
+  sudo chown $USER:$USER /usr/local/bin
   ln -s ${TMUX_DIR}/tmux.conf ~/.tmux.conf
 fi
 

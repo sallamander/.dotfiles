@@ -98,3 +98,4 @@ ENV/
 .DS_Store
 htmlcov
 template.txt
+~/.dotfiles/vim/.netrwhist

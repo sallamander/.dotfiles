@@ -1,0 +1,19 @@
+# start a machine and run `docker-machine env`
+
+function no_arg() {
+  if [ -z "$1" ] ; then
+      echo "ERROR: no argument supplied"
+      return;
+  fi
+}
+
+function dms() {
+  no_arg $1
+  docker-machine start $1
+  denv $1
+}
+
+function denv() {
+  no_arg $1
+  eval "$(docker-machine env $1)"
+}

@@ -34,12 +34,4 @@ if [ -f ~/.bash_profile.local ]; then
     source ~/.bash_profile.local
 fi
 
-# docker function
-function denv () {
-  if [ -z "$1" ] ; then
-    echo "\e[0;31mERROR:\e[0m no argument supplied"
-    return;
-  fi
-
-  eval "$(docker-machine env $1)"
-}
+source ~/.dotfiles/docker/fns

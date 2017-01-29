@@ -21,7 +21,6 @@ if [ `uname` == 'Darwin' ]; then
   brew install tmux
   brew install cmake
   cp  ${TMUX_DIR}/tmux.conf ~/.tmux.conf
-  echo "set -g default-terminal 'xterm-256color'" >> ~/.tmux.conf
   echo "set -g default-command 'reattach-to-user-namespace -l ${SHELL}'" >> ~/.tmux.conf
   echo "set -g pane-border-style fg='#a9b7c6'" >> ~/.tmux.conf
 elif [ `uname` == 'Linux' ]; then

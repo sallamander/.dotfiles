@@ -1,4 +1,9 @@
 #!/bin/bash
 
 user=$1
+
+if [ -n "$user" ]; then
+    user=$USER
+fi
+
 kill -9 $(ps aux | grep python | grep ${user} | awk '{ print $2 }')

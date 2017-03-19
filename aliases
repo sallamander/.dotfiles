@@ -1,11 +1,12 @@
 ### Git commands ###
 alias grp="git remote prune origin"
+alias gcoa="git commit --amend"
 alias gp="git pull"
 alias gs="git status"
 alias gss="git status -s"
 alias gb="git branch"
-alias gc="git checkout"
-alias gcr="git checkout" # include remote references in the tab completion
+alias gbr="git branch -r"
+alias gDb="git branch -D"
 alias grH="git reset HEAD"
 alias gl="git log"
 alias gm="git log --pretty=fuller | grep 'Commit:' | head -n 20 | sort | uniq -c | sort -r -n"

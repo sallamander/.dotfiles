@@ -29,9 +29,11 @@ source ~/.aliases
 if [ -f ~/.aliases.local ]; then
     source ~/.aliases.local
 fi
-
-if [ -f ~/.bash_profile.local ]; then
-    source ~/.bash_profile.local
-fi
-
 source ~/.dotfiles/docker/fns
+
+export CLOUDSDK_PYTHON=/usr/bin/python2.7
+if [ -d $HOME/repos ]; then
+    for REPO in $( find $HOME/repos -type d -maxdepth 1 -mindepth 1 ); do
+        export PATH=$REPO:$PATH
+    done
+fi

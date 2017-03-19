@@ -2,6 +2,7 @@
 alias grp="git remote prune origin"
 alias gcoa="git commit --amend"
 alias gp="git pull"
+alias gpu="git push"
 alias gs="git status"
 alias gss="git status -s"
 alias gb="git branch"

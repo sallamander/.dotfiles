@@ -37,6 +37,7 @@ if [ `uname` == 'Darwin' ]; then
   echo "bind-key C-z send-prefix" >> $HOME/tmux.conf
 elif [ `uname` == 'Linux' ]; then
   sudo apt-get install -y cmake
+  sudo apt-get install -y vim-gtk
 
   # change ownership so that `make install` of the tmux-mem-cpu-load can copy
   # the install to /usr/local/bin
@@ -53,11 +54,11 @@ fi
 ####################
 cp ${BASEDIR}/bash_profile $HOME/.bash_profile
 if [ `uname` == 'Darwin' ]; then
-    CONDA_PATH=$HOME/anaconda3/bin:$PATH
+    CONDA_PATH=$HOME/anaconda3/bin
 
     echo "alias vim=/usr/local/Cellar/vim/8.0.0134_2/bin/vim" >> $HOME/.bash_profile
 else
-    CONDA_PATH=$HOME/miniconda3/bin:$PATH
+    CONDA_PATH=$HOME/miniconda3/bin
 
     if command -v nvidia-smi >dev/null 2&1; then
         echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64" >> $HOME/.bash_profile
@@ -65,7 +66,7 @@ else
     fi
 fi
 
-echo "export $CONDA_PATH" >> $HOME/.bash_profile
+echo 'export PATH='"$CONDA_PATH"':$PATH' >> $HOME/.bash_profile
 
 #################
 ### remaining ###

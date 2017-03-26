@@ -34,6 +34,6 @@ source ~/.dotfiles/docker/fns
 export CLOUDSDK_PYTHON=/usr/bin/python2.7
 if [ -d $HOME/repos ]; then
     for REPO in $( find $HOME/repos -type d -maxdepth 1 -mindepth 1 ); do
-        export PATH=$REPO:$PATH
+        export PYTHONPATH=$REPO:$PYTHONPATH
     done
 fi

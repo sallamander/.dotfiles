@@ -36,6 +36,9 @@ if [ `uname` == 'Darwin' ]; then
   echo "set -g prefix C-z" >> $HOME/.tmux.conf
   echo "bind-key C-z send-prefix" >> $HOME/tmux.conf
 elif [ `uname` == 'Linux' ]; then
+  sudo apt-get update -y
+  sudo apt-get upgrade -y
+  sudo apt-get install build-essential
   sudo apt-get install -y cmake
   sudo apt-get install -y vim-gtk
 
@@ -60,7 +63,7 @@ if [ `uname` == 'Darwin' ]; then
 else
     CONDA_PATH=$HOME/miniconda3/bin
 
-    if command -v nvidia-smi >dev/null 2&1; then
+    if command -v nvidia-smi >/dev/null 2&1; then
         echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64" >> $HOME/.bash_profile
         echo "export CUDA_HOME=/usr/local/cuda" >> $HOME/.bash_profile
     fi

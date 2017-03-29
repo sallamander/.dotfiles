@@ -1,10 +1,10 @@
 #!/bin/bash
 
-branchname=$1
-alias=$2
+BRANCHNAME=$1
+ALIAS=$2
 
-git checkout -b $branchname
+git checkout -b $BRANCHNAME
 
-if [ -n "$alias" ]; then
-    gsr $branchname $alias
+if [[ ! -z $ALIAS ]]; then
+    gsr $BRANCHNAME $ALIAS
 fi

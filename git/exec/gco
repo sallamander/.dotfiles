@@ -1,12 +1,12 @@
 #!/bin/bash
 
 IN_VISION="$(pwd | grep vision)"
-if [ ! -z ${IN_VISION} ]; then
-    branch="$(git symbolic-ref HEAD | awk -F '/' '{ print $3 }')"
-    otf="$(echo $branch | awk -F '-' '{ print $1 }')"
-    ot="$(echo $otf | awk -F 'f' '{ print $2 }')"
+if [[ ! -z $IN_VISION ]]; then
+    BRANCH="$(git symbolic-ref HEAD | awk -F '/' '{ print $3 }')"
+    OTF="$(echo $branch | awk -F '-' '{ print $1 }')"
+    OT="$(echo $otf | awk -F 'f' '{ print $2 }')"
 
-    echo -e "\n\n[otf: $ot]" > template.txt
+    echo -e "\n\n[otf: $OT]" > template.txt
     git commit -t template.txt $@
     rm template.txt
 else

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-back=$1
+BACK=$1
 
-grh $back
+grh $BACK
 gp

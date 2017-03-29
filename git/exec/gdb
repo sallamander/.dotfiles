@@ -1,7 +1,7 @@
 #!/bin/bash
 
-alias=$1
+ALIAS=$1
 
-branchname="$(git branch | grep $alias | awk -F '->' '{ print $2 }')"
-git branch -D $branchname
-git symbolic-ref --delete refs/heads/$alias
+BRANCHNAME="$(git branch | grep $ALIAS | awk -F '->' '{ print $2 }')"
+git branch -D $BRANCHNAME
+git symbolic-ref --delete refs/heads/$ALIAS

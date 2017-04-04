@@ -36,9 +36,6 @@ if [ `uname` == 'Darwin' ]; then
   echo "set -g prefix C-z" >> $HOME/.tmux.conf
   echo "bind-key C-z send-prefix" >> $HOME/tmux.conf
 elif [ `uname` == 'Linux' ]; then
-  sudo apt-get update -y
-  sudo apt-get upgrade -y
-  sudo apt-get install build-essential
   sudo apt-get install -y cmake
   sudo apt-get install -y vim-gtk
 

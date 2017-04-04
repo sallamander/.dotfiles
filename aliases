@@ -1,4 +1,5 @@
 ### Git commands ###
+alias gc="git checkout"
 alias grp="git remote prune origin"
 alias gcoa="git commit --amend"
 alias gp="git pull"

@@ -34,7 +34,7 @@ if [ `uname` == 'Darwin' ]; then
 
   # leader z for OSX (local) tmux
   echo "set -g prefix C-z" >> $HOME/.tmux.conf
-  echo "bind-key C-z send-prefix" >> $HOME/tmux.conf
+  echo "bind-key C-z send-prefix" >> $HOME/.tmux.conf
 elif [ `uname` == 'Linux' ]; then
   sudo apt-get install -y cmake
   sudo apt-get install -y vim-gtk

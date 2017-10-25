@@ -119,6 +119,11 @@ inoremap jj <ESC>
     nnoremap <leader>ln :lnext<CR>
     nnoremap <leader>lb :lprevious<CR>
 
+    "Python imports
+    nnoremap <leader>mat :insert<CR>import matplotlib.pyplot as plt<CR><BS>o<esc>dd
+    nnoremap <leader>np :insert<CR>import numpy as np<CR><BS>o<esc>dd
+    nnoremap <leader>pd :insert<CR>import pandas as pd<CR><BS>o<esc>dd
+
 "Bottom bar settings
 set noruler
 set laststatus=2

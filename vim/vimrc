@@ -123,6 +123,7 @@ inoremap jj <ESC>
     nnoremap <leader>mat :insert<CR>import matplotlib.pyplot as plt<CR><BS>o<esc>dd
     nnoremap <leader>np :insert<CR>import numpy as np<CR><BS>o<esc>dd
     nnoremap <leader>pd :insert<CR>import pandas as pd<CR><BS>o<esc>dd
+    nnoremap <leader>pdb :insert<CR>import pdb; pdb.set_trace()<CR><BS>o<esc>dd
 
 "Bottom bar settings
 set noruler

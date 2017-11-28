@@ -45,3 +45,7 @@ alias tls="tmux ls"
 alias tns="tmux new -s"
 alias ta="tmux attach -t"
 alias trs="tmux rename-session"
+
+### Python ###
+alias sa="source activate"
+alias ip="ipython"

@@ -119,11 +119,12 @@ inoremap jj <ESC>
     nnoremap <leader>ln :lnext<CR>
     nnoremap <leader>lb :lprevious<CR>
 
-    "Python imports
-    nnoremap <leader>mat :insert<CR>import matplotlib.pyplot as plt<CR><BS>o<esc>dd
-    nnoremap <leader>np :insert<CR>import numpy as np<CR><BS>o<esc>dd
-    nnoremap <leader>pd :insert<CR>import pandas as pd<CR><BS>o<esc>dd
-    nnoremap <leader>pdb :insert<CR>import pdb; pdb.set_trace()<CR><BS>o<esc>dd
+    "UltiSnips
+    let g:UltiSnipsExpandTrigger="<tab>"
+    let g:UltiSnipsJumpForwardTrigger="<c-b>"
+    let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+    let g:UltiSnipsSnippetDirectories=["custom_snippets"]
+    let g:UltiSnipsSnippetsDir="~/.dotfiles/vim/bundle/ultisnips/custom_snippets/"
 
 "Bottom bar settings
 set noruler

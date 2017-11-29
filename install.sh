@@ -19,6 +19,11 @@ ln -s ${VIM_DIR}/vimrc $HOME/.vimrc
 ln -s ${VIM_DIR} $HOME/.vim
 git submodule init && git submodule update
 
+###########
+### fzf ###
+###########
+${BASEDIR}/vim/bundle/fzf/install --all
+
 ############
 ### tmux ###
 ############

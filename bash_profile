@@ -32,3 +32,5 @@ fi
 source ~/.dotfiles/docker/fns
 
 export CLOUDSDK_PYTHON=/usr/bin/python2.7
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

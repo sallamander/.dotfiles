@@ -10,6 +10,9 @@ call pathogen#helptags()
 
 let mapleader="\<Space>"
 
+"Add fzf to vim runtimepath
+set rtp+=~/.dotfiles/vim/bundle/fzf
+
 "General Settings
 set nobackup
 set nowritebackup
@@ -68,8 +71,8 @@ inoremap jj <ESC>
     let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 
 "Mappings
-    "Folding
-    nnoremap <leader>f za
+    "FZF
+    nnoremap <leader>f :FZF<CR>
 
     "Spell check
     nnoremap <leader>sc :set spell spelllang=en_us<CR>

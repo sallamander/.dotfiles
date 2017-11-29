@@ -22,3 +22,6 @@
 [submodule "vim/bundle/vim-snippets"]
 	path = vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets
+[submodule "vim/bundle/fzf"]
+	path = vim/bundle/fzf
+	url = https://github.com/junegunn/fzf.git

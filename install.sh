@@ -59,7 +59,7 @@ fi
 ####################
 cp ${BASEDIR}/bash_profile $HOME/.bash_profile
 if [ `uname` == 'Darwin' ]; then
-    echo "alias vim=/usr/local/Cellar/vim/8.0.0134_2/bin/vim" >> $HOME/.bash_profile
+    echo "alias vim=/usr/local/Cellar/vim/8.1.0100_2/bin/vim" >> $HOME/.bash_profile
 else
     if command -v nvidia-smi >/dev/null 2&1; then
         echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64" >> $HOME/.bash_profile

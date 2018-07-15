@@ -7,9 +7,6 @@
 [submodule "tmux/plugins/tmux-mem-cpu-load"]
 	path = tmux/plugins/tmux-mem-cpu-load
 	url = https://github.com/thewtex/tmux-mem-cpu-load.git
-[submodule "vim/bundle/jedi-vim"]
-	path = vim/bundle/jedi-vim
-	url = https://github.com/davidhalter/jedi-vim.git
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git

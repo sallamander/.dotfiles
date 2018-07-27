@@ -79,6 +79,6 @@ ln -s ${BASEDIR}/aliases $HOME/.aliases
 # make the tmux-cpu-mem-load plugin
 cd ${TMUX_DIR}/plugins/tmux-mem-cpu-load
 cmake .
-make
-make install
+sudo make
+sudo make install
 cd ${BASEDIR}

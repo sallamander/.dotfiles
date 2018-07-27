@@ -57,18 +57,18 @@ fi
 ####################
 ### bash profile ###
 ####################
-cp ${BASEDIR}/bash_profile $HOME/.bash_profile
+cp ${BASEDIR}/bashrc $HOME/.bashrc
 if [ `uname` == 'Darwin' ]; then
-    echo "alias vim=/usr/local/Cellar/vim/8.1.0100_2/bin/vim" >> $HOME/.bash_profile
+    echo "alias vim=/usr/local/Cellar/vim/8.1.0100_2/bin/vim" >> $HOME/.bashrc
 else
     if command -v nvidia-smi >/dev/null 2&1; then
-        echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64" >> $HOME/.bash_profile
-        echo "export CUDA_HOME=/usr/local/cuda" >> $HOME/.bash_profile
+        echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64" >> $HOME/.bashrc
+        echo "export CUDA_HOME=/usr/local/cuda" >> $HOME/.bashrc
     fi
 fi
 
 CONDA_PATH=$HOME/miniconda3/bin
-echo 'export PATH='"$CONDA_PATH"':$PATH' >> $HOME/.bash_profile
+echo 'export PATH='"$CONDA_PATH"':$PATH' >> $HOME/.bashrc
 
 #################
 ### remaining ###

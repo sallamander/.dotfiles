@@ -67,7 +67,11 @@ else
     fi
 fi
 
-CONDA_PATH=$HOME/miniconda3/bin
+if [ -d $HOME/miniconda3 ]; then
+    CONDA_PATH=$HOME/miniconda3/bin
+elif [ -d /opt/conda ]; then
+    CONDA_PATH=/opt/conda
+fi
 echo 'export PATH='"$CONDA_PATH"':$PATH' >> $HOME/.bashrc
 
 #################
@@ -82,5 +86,3 @@ cmake .
 sudo make
 sudo make install
 cd ${BASEDIR}
-
-source ~/.bashrc

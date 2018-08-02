@@ -82,3 +82,5 @@ cmake .
 sudo make
 sudo make install
 cd ${BASEDIR}
+
+source ~/.bashrc

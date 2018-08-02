@@ -28,8 +28,8 @@ alias lsl="ls -lhSG"
 alias ls="ls -G"
 
 ### Profiles ###
-alias bp="vim ~/.bash_profile"
-alias sbp="source ~/.bash_profile"
+alias br="vim ~/.bashrc"
+alias sbr="source ~/.bashrc"
 
 #### Random ###
 alias path='echo $PATH | tr -s ":" "\n"' # pretty print path
@@ -49,3 +49,7 @@ alias trs="tmux rename-session"
 ### Python ###
 alias sa="source activate"
 alias ip="ipython"
+
+### Docker ###
+alias di="docker image"
+alias dc="docker container"

@@ -79,10 +79,3 @@ echo 'export PATH='"$CONDA_PATH"':$PATH' >> $HOME/.bashrc
 #################
 ln -s ${BASEDIR}/inputrc $HOME/.inputrc
 ln -s ${BASEDIR}/aliases $HOME/.aliases
-
-# make the tmux-cpu-mem-load plugin
-cd ${TMUX_DIR}/plugins/tmux-mem-cpu-load
-cmake .
-sudo make
-sudo make install
-cd ${BASEDIR}

@@ -42,7 +42,7 @@ if [ `uname` == 'Darwin' ]; then
   echo "bind-key C-z send-prefix" >> $HOME/.tmux.conf
 elif [ `uname` == 'Linux' ]; then
   sudo apt-get install -y cmake
-  sudo apt-get install -y vim-gtk
+  sudo apt-get install -y vim
 
   # change ownership so that `make install` of the tmux-mem-cpu-load can copy
   # the install to /usr/local/bin

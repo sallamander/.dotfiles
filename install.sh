@@ -42,7 +42,7 @@ if [ `uname` == 'Darwin' ]; then
   echo "bind-key C-z send-prefix" >> $HOME/.tmux.conf
 elif [ `uname` == 'Linux' ]; then
   sudo apt-get install -y cmake
-  sudo apt-get install -y vim
+  sudo apt-get install -y vim-gtk-py2
 
   # change ownership so that `make install` of the tmux-mem-cpu-load can copy
   # the install to /usr/local/bin
@@ -79,3 +79,9 @@ echo 'export PATH='"$CONDA_PATH"':$PATH' >> $HOME/.bashrc
 #################
 ln -s ${BASEDIR}/inputrc $HOME/.inputrc
 ln -s ${BASEDIR}/aliases $HOME/.aliases
+
+##########################
+### jed-vim  jedi init ###
+##########################
+cd ${BASEDIR}/vim/bundle/jedi-vim/
+git submodule update --init

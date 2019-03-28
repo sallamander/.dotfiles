@@ -78,27 +78,14 @@ inoremap jj <ESC>
     nnoremap <leader>sc :set spell spelllang=en_us<CR>
     nnoremap <leader>so :set nospell<CR>
 
-    "Buffers
-    nnoremap <leader>k <C-w>k
-    "nnoremap <leader>l :blast<CR>
-    nnoremap <leader>j <C-w>j
-    "nnoremap <leader>h :bfirst<CR>
-    "nnoremap <leader>c :bdelete<CR>
-    "nnoremap <leader>e :edit<Space>
-
     "Splits
-    "nnoremap <leader>sr= :resize +5<CR>
-    "nnoremap <leader>sr- :resize -5<CR>
-    "nnoremap <leader>sj <C-w>j
-    "nnoremap <leader>sk <C-w>k
+    nnoremap <leader>sr= :resize +5<CR>
+    nnoremap <leader>sr- :resize -5<CR>
 
     "Productivity
     nnoremap <leader>w :w<CR>
-    "nnoremap <leader>W :wa<CR>
     nnoremap <leader>q :wq<CR>
-    "nnoremap <leader>Q :wqa<CR>
     nnoremap <leader>fq :q!<CR>
-    "nnoremap <leader>Fq :qa!<CR>
     nnoremap <leader>rp :! python %<CR>
     nnoremap <leader>u <C-r>
     nnoremap <leader>o :noh<CR>
@@ -114,8 +101,11 @@ inoremap jj <ESC>
     "Clipboard
     nnoremap <leader>y :<C-u>exec 'normal ' . v:count1 . '"+yy'<CR>
     vnoremap <leader>y "+y
-    nnoremap <leader>p :<C-u>exec 'normal ' . v:count1 . '"+p'<CR>
+    nnoremap <leader>p "+p
     vnoremap <leader>p "+p
+
+    vmap "+y :!xclip -f -sel clip
+    map "+p :r!xclip -o -sel clip
 
     "Syntastic
     nnoremap <leader>l :SyntasticCheck<CR>
@@ -123,11 +113,12 @@ inoremap jj <ESC>
     nnoremap <leader>lb :lprevious<CR>
 
     "UltiSnips
-    let g:UltiSnipsExpandTrigger="blah"
+
+     let g:UltiSnipsExpandTrigger="<tab>"
     "let g:UltiSnipsJumpForwardTrigger="<tab>"
     "let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
     "let g:UltiSnipsSnippetDirectories=["custom_snippets"]
-    "let g:UltiSnipsSnippetsDir="~/.dotfiles/vim/bundle/ultisnips/custom_snippets/"
+    let g:UltiSnipsSnippetsDir="~/.dotfiles/vim/bundle/custom_snippets/"
 
 "Bottom bar settings
 set noruler

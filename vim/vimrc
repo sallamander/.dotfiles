@@ -114,10 +114,11 @@ inoremap jj <ESC>
 
     "UltiSnips
 
-    let g:UltiSnipsExpandTrigger="<tab>"
+    let g:UltiSnipsExpandTrigger="<leader><tab>"
     let g:UltiSnipsJumpForwardTrigger="<tab>"
     let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
     let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/bundle/custom-snippets']
+    let g:ultisnips_python_style="sphinx"
 
 "Bottom bar settings
 set noruler

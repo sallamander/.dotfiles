@@ -138,7 +138,7 @@ def format_arg(arg, style):
         return "@param %s TODO" % arg
     elif style == SPHINX:
         param_str = ":param %s: TODO\n\t" % arg
-        type_str = ":type %s: TODO" % arg
+        type_str = "\t:type %s: TODO" % arg
         return param_str + type_str
     elif style == NORMAL:
         return ":%s: TODO" % arg
@@ -155,7 +155,7 @@ def format_return(style):
         return "@return: TODO"
     elif style in (NORMAL, SPHINX, JEDI):
         return_str = ":return: TODO\n\t"
-        rtype_str = ":rtype:"
+        rtype_str = "\t:rtype:"
         return return_str + rtype_str
     elif style == GOOGLE:
         return "Returns: TODO"
@@ -526,6 +526,11 @@ if snip.indent:
 	`!p snip.rv = triple_quotes(snip)`${4:TODO: Docstring for $1.}`!p
 write_function_docstring(t, snip) `
 	${5:${VISUAL:pass}}
+endsnippet
+
+snippet param "fill in parameter" b
+:param $1:
+:type $1:
 endsnippet
 
 

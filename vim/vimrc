@@ -99,6 +99,7 @@ inoremap jj <ESC>
     nnoremap <leader>gp :Git push<CR>
 
     "Clipboard
+    set clipboard=unnamed
     nnoremap <leader>y :<C-u>exec 'normal ' . v:count1 . '"+yy'<CR>
     vnoremap <leader>y "+y
     nnoremap <leader>p "+p

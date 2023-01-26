@@ -53,3 +53,5 @@ alias ip="ipython"
 ### Docker ###
 alias di="docker image"
 alias dc="docker container"
+alias ds="docker start"
+alias de="docker exec"
